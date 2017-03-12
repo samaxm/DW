@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".social.ui.SetUserInfoActivity"
+    tools:showIn="@layout/activity_set_user_info">
+
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/self_icon_pagers"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="376dp">-->
+        <!--</android.support.v4.view.ViewPager>-->
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/self_icon_pagers"
+                android:layout_width="match_parent"
+                android:layout_height="376dp">
+            </android.support.v4.view.ViewPager>
+            <TableLayout
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/info_table"
+                >
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/user_info_bg"
+                    >
+                    <TextView
+                        android:text="个性标签"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="sign"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_tag"
+                        android:layout_weight="1"
+                        android:layout_height="90dp"
+                        />
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="昵称"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="name"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        android:id="@+id/user_info_nick"
+                        style="@style/infoValue"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="大腕ID"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="id"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_id"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="性别"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="sex"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:layout_weight="1"
+                        android:id="@+id/user_info_gender"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="年龄"
+                        style="@style/infoTitle"
+                        />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:text="age"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_age"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="地区"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="area"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_area"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="星座"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="star"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:layout_weight="1"
+                        android:id="@+id/user_info_star"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="姓名"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="realname"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_realname"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <TextView
+                        android:text="公司"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="company"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_company"
+                        android:layout_weight="1"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/user_info_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:clickable="true"
+                    >
+                    <TextView
+                        android:text="职位"
+                        style="@style/infoTitle"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:text="title"
+                        />
+                    <TextView
+                        android:text="aaa"
+                        style="@style/infoValue"
+                        android:id="@+id/user_info_title"
+                        />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                    <!--android:id="@+id/sdv_set_icon"-->
+                    <!--android:layout_width="80dp"-->
+                    <!--android:layout_height="80dp"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--fresco:placeholderImage="@drawable/icon_no_user_icon_x3"-->
+                    <!--fresco:roundAsCircle="true"-->
+                    <!--fresco:roundedCornerRadius="40dp" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:text="*设置头像" />-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="56dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="8dp"-->
+                    <!--android:text="*昵称:" />-->
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<EditText-->
+                        <!--android:imeOptions="actionNext"-->
+                        <!--android:id="@+id/et_input_name"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:hint="你的昵称，非常值钱"-->
+                        <!--android:maxLength="20"-->
+                        <!--android:inputType="text"-->
+                        <!--android:maxLines="1" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="8dp"-->
+                    <!--android:text="签名:" />-->
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<EditText-->
+                        <!--android:id="@+id/et_input_sign"-->
+                        <!--style="@style/Base.Widget.AppCompat.EditText"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="聊点啥：你是谁？你在哪？今天晚饭吃什么？"-->
+                        <!--android:inputType="text"-->
+                        <!--android:maxLength="50" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="56dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="8dp"-->
+                    <!--android:text="性别:" />-->
+
+                <!--<TextView-->
+                    <!--style="@style/EditTextStyleForTextView"-->
+                    <!--android:id="@+id/tv_select_sex"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:clickable="true"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:hint="请选择性别" />-->
+
+            <!--</LinearLayout>-->
+
+
+            <!--&lt;!&ndash;TODO 实现地区选择&ndash;&gt;-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="56dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:visibility="gone">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="8dp"-->
+                    <!--android:text="地区:" />-->
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_select_area"-->
+                        <!--style="@style/EditTextStyleForTextView"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:hint="请选择城市"-->
+                        <!--android:maxLength="20"-->
+                        <!--android:maxLines="1" />-->
+                <!--</android.support.design.widget.TextInputLayout>-->
+            <!--</LinearLayout>-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_push"-->
+                <!--style="?android:textAppearanceSmall"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="64dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:text="提交"-->
+                <!--android:textStyle="bold" />-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+</LinearLayout>

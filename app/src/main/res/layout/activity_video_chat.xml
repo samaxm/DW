@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:keepScreenOn="true"
+    tools:context=".videoChat.VideoChatActivity">
+    <!--android:theme="@style/AppTheme.AppBarOverlay"-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+       <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:navigationIcon="@drawable/icon_app_mini_logo_x3"-->
+            <!--android:visibility="gone"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center">-->
+
+                <!--<com.facebook.drawee.view.SimpleDraweeView-->
+                    <!--android:id="@+id/iv_user_icon"-->
+                    <!--android:layout_width="36dp"-->
+                    <!--android:layout_height="36dp"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:visibility="gone"-->
+                    <!--fresco:placeholderImage="@drawable/icon_no_user_icon_x3"-->
+                    <!--fresco:roundedCornerRadius="17dp" />-->
+
+                <!--<TextView-->
+                    <!--android:onClick="testSomething"-->
+                    <!--android:id="@+id/tv_title"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:maxLength="10"-->
+                    <!--android:text="大我"-->
+                    <!--android:textColor="@color/black_overlay"-->
+                    <!--android:textSize="16dp" />-->
+            <!--</LinearLayout>-->
+        <!--</android.support.v7.widget.Toolbar>-->
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <include layout="@layout/content_video_chat" />
+
+
+</android.support.design.widget.CoordinatorLayout>

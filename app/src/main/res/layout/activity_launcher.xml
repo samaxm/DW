@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vip_bg_new"
+    tools:context=".accountAndSecurity.ui.LauncherActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="36dp"
+            android:textSize="18dp"
+            android:textColor="#ea9744"
+            android:text="请输入酒店、奢侈品的邀请码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:drawableBottom="@drawable/bg_input_vip_code_bottom_x3"
+                    android:id="@+id/tv_code1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:drawableBottom="@drawable/bg_input_vip_code_bottom_x3"
+
+                    android:id="@+id/tv_code2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:drawableBottom="@drawable/bg_input_vip_code_bottom_x3"
+
+                    android:id="@+id/tv_code3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="28dp" />
+
+                <TextView
+                    android:id="@+id/tv_code4"
+                    android:drawableBottom="@drawable/bg_input_vip_code_bottom_x3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="28dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:cursorVisible="false"
+                android:id="@+id/et_input_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0000"
+                android:maxLength="4"
+                android:textColor="#0000" />
+
+        </FrameLayout>
+        
+        <TextView
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="验  证"
+            android:onClick="onCheckCodeClick"
+            android:layout_marginTop="200dp"
+            android:background="#efa046"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="242dp"
+            android:layout_height="40dp" />
+
+        <ImageView
+            android:id="@+id/tv_no_code"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onNoCodeClick"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/action_selector_vip_login"
+            android:layout_width="242dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

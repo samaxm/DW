@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_like"
+        android:checkable="true"
+        android:icon="@drawable/ic_favorite_border_white_24dp"
+        android:orderInCategory="100"
+        android:title="收藏TA"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_report"
+        android:orderInCategory="100"
+        android:title="举报"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_to_user_center"
+        android:orderInCategory="100"
+        android:title="用户中心"
+        android:icon="@drawable/icon_video_jump"
+        app:showAsAction="ifRoom" />
+
+</menu>

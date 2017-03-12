@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pay_vip_charge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="@drawable/vip_bg_new"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.sx.dw.accountAndSecurity.ui.PayVipChargeActivity">
+
+    <TextView
+        android:gravity="center"
+        android:textColor="#ea9744"
+        android:id="@+id/textView3"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="验证码正确\n\n您即将与您同一消费圈层的用户交友。\n\n请缴纳会费20元/月，\n\n成为大我VIP会员，\n\n开始优越感爆棚的随机视频之旅" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="202dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:onClick="onWeChatClick"
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="80dp"
+            app:srcCompat="@drawable/action_icon_login_wechat" />
+
+        <ImageView
+            android:onClick="onAliPayClick"
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/action_icon_alipay_x3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/linearLayout"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+</RelativeLayout>

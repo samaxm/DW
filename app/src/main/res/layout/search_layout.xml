@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/search_line"
+        android:background="@color/colorPrimary"
+        >
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="17dp"
+            android:src="@drawable/back_icon"
+            android:id="@+id/back_btn"
+            android:layout_centerVertical="true"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            />
+        
+        <EditText
+            android:layout_width="235dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back_btn"
+            android:id="@+id/search_text"
+            android:hint="@string/search_hint"
+            android:textSize="14sp"
+            android:textColor="@color/dark_black"
+            android:textColorHint="@color/hint_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:background="@drawable/rounded_corners_left"
+            />
+        
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/search_text"
+            android:id="@+id/clear_text"
+
+            android:background="@drawable/clear_text"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            android:textSize="16sp"
+            android:id="@+id/search_button"
+            android:textColor="@color/dark_black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="14dp"
+
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/empty_hint"
+        android:text="暂无搜索结果"
+        android:layout_below="@+id/search_line"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/info_title"
+        android:visibility="gone"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_below="@+id/search_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>

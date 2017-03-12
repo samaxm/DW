@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('D:/sam/code/dw/dw.keystore')
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        applicationId "com.sx.dw"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 2510
+        versionName '2.5.1'
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+//            abiFilters 'armeabi-v7a','arm64-v8a'
+            abiFilters "armeabi-v7a","x86"
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "6a8f279e406382c2a8f9f684", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDirs=['src/main/jniLibs/']
+        }
+    }
+    productFlavors {
+    }
+}
+repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+
+dependencies {
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //内存泄漏检测
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    compile 'cn.jiguang:jpush:2.1.8'
+    //极光推送
+
+    //调试数据库用的
+    compile 'com.facebook.stetho:stetho:1.3.1'
+    compile 'com.facebook.stetho:stetho-okhttp3:1.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+    //支持65k方法
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.google.protobuf:protobuf-java:3.1.0'
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'com.yalantis:ucrop:2.2.0'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:converter-protobuf:2.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+    compile 'com.apkfuns.logutils:library:1.4.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    testCompile 'junit:junit:4.12'
+    compile files('src/main/jniLibs/alipaySdk-20160825.jar')
+    compile files('src/main/jniLibs/android-async-http-1.4.8.jar')
+    compile files('src/main/jniLibs/avoscloud-feedback-v3.14.5.jar')
+    compile files('src/main/jniLibs/avoscloud-sdk-v3.14.5.jar')
+    compile files('src/main/jniLibs/okhttp-2.6.0-leancloud.jar')
+    compile files('src/main/jniLibs/okio-1.6.0-leancloud.jar')
+    compile files('src/main/jniLibs/org.apache.http.legacy.jar')
+    compile files('src/main/jniLibs/SocialSDK_QQZone_3.jar')
+    compile files('src/main/jniLibs/SocialSDK_umengqq.jar')
+    compile files('src/main/jniLibs/SocialSDK_WeiXin_2.jar')
+    compile files('src/main/jniLibs/umeng_social_apiv6.0.0.jar')
+    compile files('src/main/jniLibs/umeng_social_netv6.0.0.jar')
+    compile files('src/main/jniLibs/umeng_social_viewv6.0.0.jar')
+    compile files('src/main/jniLibs/SocialSDK_WeiXin_1.jar')
+    compile files('src/main/jniLibs/hyphenatechat_3.1.5.jar')
+    compile files('src/main/jniLibs/fastjson.jar')
+
+
+    compile fileTree(include: ['*.jar'], dir: 'src/main/jniLibs')
+    compile 'org.slf4j:slf4j-android:1.7.22'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+}

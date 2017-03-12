@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_margin="16dp"
+        android:id="@+id/tv_time"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!-- 这个预留，作为被喜欢的消息-->
+    <LinearLayout
+        android:id="@+id/ll_like_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_like_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:placeholderImage="@drawable/icon_no_user_icon_x3"
+            app:roundedCornerRadius="18dp" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:maxWidth="250dp"
+            android:id="@+id/tv_like_msg"
+            android:text="老猥琐 收藏了你"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_get_msg_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_user_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:placeholderImage="@drawable/icon_no_user_icon_x3"
+            app:roundedCornerRadius="18dp" />
+
+        <TextView
+            android:id="@+id/tv_get_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/chat_bg_get"
+            android:padding="8dp"
+            android:text="这是一条皮皮虾" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_send_msg_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/proBar_send_msg"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:padding="8dp"
+            android:id="@+id/iv_ic_msg_failure"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_msg_failure"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_send_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/chat_bg_send"
+            android:padding="8dp"
+            android:text="这是一只象拔蚌" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_my_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:placeholderImage="@drawable/icon_no_user_icon_x3"
+            app:roundedCornerRadius="18dp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

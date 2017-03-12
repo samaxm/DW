@@ -1,0 +1,1 @@
+ALTER TABLE LinkMans ADD COLUMN tag TEXT;

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.sx.dw">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.sx.dw.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".core.DWApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_app_x3"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/DWAppTheme">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57bfdf7267e58eb173001645" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="DW" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="DW_DB.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="10" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.sx.dw.im.entity.ChatMsg,com.sx.dw.im.entity.Chat,com.sx.dw.im.entity.LinkMan" />
+
+        <!-- 环信 -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="shengxian#dw" />
+
+        <activity
+            android:name=".accountAndSecurity.ui.LauncherActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <service android:name=".version.DownloadListenerService" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 测试界面 -->
+        <activity android:name=".test.TestFJActivity" />
+        <!-- 视频聊天界面 -->
+
+
+        <!-- 友盟activity -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101352168" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".accountAndSecurity.ui.LoginActivity"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".social.ui.WebWealcomeActivity"
+            android:launchMode="singleInstance"
+            >
+        </activity>
+        <activity android:hardwareAccelerated="true"
+            android:name=".videoChat.WebGameActivity"
+            android:launchMode="singleInstance"
+            >
+
+        </activity>
+
+        <!--<activity-->
+            <!--android:name=".accountAndSecurity.ui.LaunchActivity"-->
+            <!--&gt;-->
+
+        <!--</activity>-->
+
+
+        <activity
+            android:name=".accountAndSecurity.ui.RegisterActivity"
+            android:label="注册"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".accountAndSecurity.ui.CheckPhoneActivity"
+            android:label="@string/title_activity_check_phone"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".social.ui.SearchActivity"
+            android:label="搜索用户"
+            android:theme="@style/DWAppTheme" />
+
+        <activity
+            android:name=".accountAndSecurity.ui.SetPasswordActivity"
+            android:label="@string/title_activity_set_password"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".videoChat.VideoChatActivity"
+            android:label="@string/title_activity_video_chat_v2"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".social.ui.SetUserInfoActivity"
+            android:label="@string/title_activity_set_user_info"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".social.ui.SetUserInfoDetailActivity"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="stateVisible" />
+
+        <!-- 图片裁剪 -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".accountAndSecurity.ui.AccountAndSecurityActivity"
+            android:label="@string/title_activity_account_info"
+            android:theme="@style/DWAppTheme" />
+        <!-- leanCloud 反馈 -->
+        <activity android:name="com.avos.avoscloud.feedback.ThreadActivity" />
+
+        <service
+            android:name=".im.message.MsgSyncService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name=".im.ui.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".social.ui.UserCenterActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/DWAppTheme" />
+
+        <receiver
+            android:name=".im.message.MsgSyncReceiverInApp"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="1000">
+                <action android:name="com.sx.dw.BROADCAST_ACTION_GET_MSG" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".social.ui.UserCenterActivity"
+            android:label="@string/title_activity_test_user_center"
+            android:theme="@style/DWAppTheme" />
+
+
+
+
+
+        <activity
+            android:name=".social.ui.UserInfoActivity"
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity android:name=".wxapi.WXPayEntryActivity" />
+        <activity
+            android:name=".wealth.WealthActivity"
+            android:label="@string/title_activity_wealth"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".wealth.RechargeActivity"
+            android:label="@string/title_activity_recharge"
+            android:theme="@style/DWAppTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".wealth.WithdrawExplainActivity"
+            android:label="@string/title_activity_withdraw_explain"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".wealth.WithdrawActivity"
+            android:label="@string/title_activity_withdraw"
+            android:theme="@style/DWAppTheme" />
+
+        <receiver
+            android:name=".im.message.JPushReceiverInApp"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+
+                <category android:name="com.sx.dw" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".test.VideoChatV2Activity"
+            android:label="@string/title_activity_video_chat_v2"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".accountAndSecurity.ui.LoadingActivity"
+            android:label="@string/title_activity_loading_v2"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".wealth.SetWorthActivity"
+            android:label="@string/title_activity_reset_worth"
+            android:theme="@style/DWAppTheme" />
+        <activity
+            android:name=".accountAndSecurity.ui.LoadingV2Activity"
+            android:label="@string/title_activity_loading_v2"
+            android:theme="@style/DWAppTheme" />
+        <activity android:name=".accountAndSecurity.ui.PayVipChargeActivity"></activity>
+
+
+
+
+
+        <activity android:name=".video.ui.MainActivity" android:label="@string/app_name" android:launchMode="singleTask" android:configChanges="orientation|keyboardHidden|screenSize" android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".video.ui.ChatActivity" android:screenOrientation="portrait" android:configChanges="orientation|keyboardHidden|screenSize" android:parentActivityName=".video.ui.MainActivity" android:launchMode="singleTask" android:theme="@style/FullscreenTheme"/>
+        <activity android:name=".video.ui.SettingsActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:screenOrientation="portrait" android:label="@string/label_settings"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".accountAndSecurity.ui.RegisterActivity"
+    tools:showIn="@layout/activity_register">
+
+    <ScrollView
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:textColor="#4A4A4A"
+            android:text="登录"
+            android:id="@+id/toLogin"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="19dp"
+            />
+        <ImageView
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:id="@+id/dw_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/icon_app_x3"
+            />
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/phone_text"-->
+        <!---->
+        <!--&gt;-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+            <LinearLayout
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/dw_icon"
+                android:id="@+id/phone_line"
+                android:layout_marginTop="58dp"
+                >
+                <AutoCompleteTextView
+                    android:theme="@style/loginTheme"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/et_input_phone_number"
+                    android:layout_height="wrap_content"
+                    android:digits="1234567890"
+                    android:hint="手机号"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberSigned"
+                    android:maxLines="1" />
+
+                    <Button
+                    android:id="@+id/btn_send_code"
+                    android:textColor="@color/gray"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:text="获取验证码" />
+            </LinearLayout>
+
+
+        <!--<android.support.design.widget.TextInputLayout-->
+        <!---->
+
+        <!--android:layout_weight="16.88"-->
+        <!--android:layout_below="@+id/phone_text"-->
+        <!--android:id="@+id/it_pwd"-->
+        <!--app:passwordToggleEnabled="false"-->
+
+        <!--&gt;-->
+        <EditText
+            android:theme="@style/loginTheme"
+            android:layout_below="@+id/phone_line"
+            android:imeOptions="actionDone"
+            android:id="@+id/et_input_phone_code"
+            android:layout_height="wrap_content"
+            android:digits="1234567890"
+            android:hint="请输入验证码"
+            android:inputType="phone"
+            android:layout_width="288dp"
+            android:layout_centerHorizontal="true"
+            android:maxLength="4"
+            android:maxLines="1" />
+
+
+        <EditText
+            android:theme="@style/loginTheme"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:layout_below="@+id/et_input_phone_code"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_input_password"
+            android:layout_centerHorizontal="true"
+            android:hint="请输入密码"
+            android:imeActionId="@+id/login"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="287dp"
+            android:layout_height="46dp"
+            android:background="@drawable/btn_status_selector"
+            android:layout_below="@+id/et_input_password"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_marginTop="26dp"
+            android:layout_centerHorizontal="true"
+            android:text="注册"
+            android:enabled="false"
+            android:textColor="@color/disableBtnText"
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/line"
+            android:layout_marginTop="75dp"
+            android:layout_below="@+id/btn_register"
+            android:visibility="gone"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:id="@+id/notice"
+                android:layout_centerInParent="true"
+                android:text="使用快捷登陆" />
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="1dp"
+                android:layout_toLeftOf="@id/notice"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="19dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:layout_width="86dp"
+                android:layout_height="1dp"
+                android:layout_toRightOf="@id/notice"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="19dp"
+                android:background="@color/gray_line" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginTop="30dp"
+            android:id="@+id/party_register"
+            >
+
+            <ImageView
+                android:id="@+id/iv_register_wechat"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="84dp"
+                android:visibility="gone"
+                android:src="@drawable/action_icon_login_wechat" />
+
+            <ImageView
+                android:id="@+id/iv_register_qq"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="84dp"
+                android:visibility="gone"
+                android:src="@drawable/action_icon_login_qq" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册即代表您同意" />
+
+            <TextView
+                android:textSize="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#4e92ff"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="《大我用户使用协议》" />
+        </LinearLayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="1">-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="8dp">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_input_phone_number"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:digits="1234567890"-->
+                    <!--android:hint="请输入手机号码"-->
+                    <!--android:imeOptions="actionNext"-->
+                    <!--android:inputType="numberSigned"-->
+                    <!--android:maxLength="11"-->
+                    <!--android:maxLines="1" />-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--android:layout_weight="16.88">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_input_password"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="请输入密码"-->
+                    <!--android:imeActionId="@+id/login"-->
+                    <!--android:imeOptions="actionNext"-->
+                    <!--android:inputType="textPassword"-->
+                    <!--android:maxLength="20"-->
+                    <!--android:maxLines="1" />-->
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal">-->
+
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--android:layout_weight="1">-->
+
+                    <!--<EditText-->
+                        <!--android:imeOptions="actionDone"-->
+                        <!--android:id="@+id/et_input_phone_code"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:digits="1234567890"-->
+                        <!--android:hint="请输入验证码"-->
+                        <!--android:inputType="numberSigned"-->
+                        <!--android:maxLength="4"-->
+                        <!--android:maxLines="1" />-->
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+                <!--<Button-->
+                    <!--android:id="@+id/btn_send_code"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:background="@color/colorAccent"-->
+
+                    <!--android:paddingLeft="8dp"-->
+                    <!--android:paddingRight="8dp"-->
+                    <!--android:text="获取验证码" />-->
+            <!--</LinearLayout>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_register"-->
+                <!--style="?android:textAppearanceSmall"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="16dp"-->
+                <!--android:layout_marginTop="16dp"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:text="注册"-->
+                <!--android:textStyle="bold" />-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:layout_marginBottom="24dp"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#aaaaaa" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="28dp"-->
+                    <!--android:layout_marginRight="28dp"-->
+                    <!--android:text="使用快捷注册" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="#aaaaaa" />-->
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:gravity="center"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_register_wechat"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:layout_marginRight="40dp"-->
+                    <!--android:src="@drawable/action_icon_login_wechat" />-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_register_qq"-->
+                    <!--android:layout_width="60dp"-->
+                    <!--android:layout_height="60dp"-->
+                    <!--android:src="@drawable/action_icon_login_qq" />-->
+
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

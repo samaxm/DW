@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/contentBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_user_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="10dp"
+            app:placeholderImage="@drawable/icon_no_user_icon_x3"
+            app:roundedCornerRadius="24dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SingleLineTextView"
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="玩个球个球球"
+                    android:textColor="#030303"
+                    android:textSize="16dp" />
+
+                <TextView
+                    style="@style/SingleLineTextView"
+                    android:id="@+id/tv_time"
+                    android:text="09:16"
+                    android:textColor="#999999"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/SingleLineTextView"
+                    android:id="@+id/tv_last_msg"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:textColor="#666666"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_unread_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_unread_msg_x3"
+                    android:text="99+"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>

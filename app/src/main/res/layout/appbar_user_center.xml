@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBackground"
+    app:layout_collapseMode="parallax">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon_appbar_bg_x3" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_user_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingBottom="18dp"
+        android:paddingRight="16dp"
+        android:paddingTop="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="41dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="32dp">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/sdv_icon"
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        app:placeholderImage="@drawable/icon_no_user_icon_x3"
+                        app:roundAsCircle="true"
+                        app:roundedCornerRadius="40dp" />
+
+                    <ImageView
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:src="@drawable/icon_user_icon_cover_x3" />
+
+                    <ImageView
+                        android:id="@+id/iv_sex_icon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginRight="8dp" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/iv_star"
+                    android:visibility="gone"
+                    android:src="@drawable/action_icon_star_x3_1"
+                    android:layout_width="33dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_horizontal" />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:drawableRight="@drawable/action_icon_edit_x3"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="球个球球个球球"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingLeft="31dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身价:￥"
+                        android:textColor="#ccffffff"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_worth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#ccffffff"
+                        android:textSize="14dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:paddingLeft="31dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身家:￥"
+                        android:textColor="#ffffff"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:id="@+id/tv_wealth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#ffffff"
+                        android:textSize="11dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="2"
+            android:text="这是一个签名，比较没味道，比较没味道，比较没味道，比较没味道，比较没味道，比较没味道，比较没味道，"
+            android:textColor="#ccffffff"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:drawableLeft="@drawable/ic_test_vector"
+            android:gravity="center_vertical"
+            android:text="深圳南山区"
+            android:textColor="#666666"
+            android:textSize="16dp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

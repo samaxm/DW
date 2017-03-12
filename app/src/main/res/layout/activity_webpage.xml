@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webpage"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    </WebView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/time"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/back_time_bg"
+        android:text="123"
+        />
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/to_message"
+        android:background="@drawable/close_web"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

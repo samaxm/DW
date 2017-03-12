@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#000000</color>
+
+
+    <color name="colorPrimary">#ffd900</color>
+    <color name="colorPrimaryDark">#dfbe00</color>
+    <color name="colorAccent">#ffd900</color>
+    <color name="tagGray">#5f5f5f</color>
+    <color name="tagLightGray">#8c8c8c</color>
+    <color name="tagYellow">#d7bc24</color>
+    <color name="tagText">#f5f5f5</color>
+    <color name="tagEditBg">#AAAAAA</color>
+    <color name="btnPressed">#C3A500</color>
+    <color name="disableBtnText">#FFFFFF</color>
+    <color name="jumpTitle">#4A4A4A</color>
+    <color name="chat_send_bg">#f9bdba</color>
+    <color name="chat_get_bg">#e3e6ed</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="info_title">#9b9b9b</color>
+    <color name="info_value">#4a4a4a</color>
+    <color name="info_bg">#85dbdbdb</color>
+
+
+    <!--<color name="background">#e4e4e4</color>-->
+    <color name="background">#f5f5f5</color>
+    <color name="contentBackground">#ffffff</color>
+    <color name="address_bg">#cdffffff</color>
+    <color name="tag_bg">#17000000</color>
+    <color name="title_bg">#4c000000</color>
+    <color name="hint_color">#dddddd</color>
+
+
+
+    <color name="agora_blue">#FF00A0EB</color>
+    <color name="lightColorAccent">#30FF4081</color>
+    <color name="dark_black">#CC262626</color>
+    <color name="transparent_75_white">#ACFFFFFF</color>
+    <color name="dark_gray">#FF55585A</color>
+
+
+</resources>

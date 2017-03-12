@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:background="@color/contentBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv_user_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="10dp"
+        app:placeholderImage="@drawable/icon_no_user_icon_x3"
+        app:roundedCornerRadius="24dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                style="@style/SingleLineTextView"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/tv_user_name"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:text="我叫球球"/>
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/starLogo"
+                android:src="@drawable/action_icon_star_x3_1"
+                android:visibility="gone"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="来源"
+                android:id="@+id/tag"
+                android:visibility="gone"
+                />
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_user_sign"
+            android:text="我是算命哒"
+            android:textSize="14dp"
+            style="@style/SingleLineTextView"/>
+
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_send_msg"
+        style="?android:textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/icon_likelist_item_send_msg_x3"
+        android:textColor="@color/colorAccent"
+        android:text="发消息" />
+</LinearLayout>

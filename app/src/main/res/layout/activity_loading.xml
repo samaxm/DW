@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#519B9A9B"
+    android:id="@+id/tag_layout"
+    tools:context="com.sx.dw.accountAndSecurity.ui.LoadingActivity">
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+        <!--<android.support.v7.widget.Toolbar-->
+            <!--android:id="@+id/toolbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="?attr/actionBarSize"-->
+            <!--android:background="?attr/colorPrimary"-->
+            <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="写个标签"
+        android:id="@+id/title"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="21dp"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:enabled="false"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:clipToPadding="true"
+        android:id="@+id/container"
+        >
+
+
+        <TextView
+            android:id="@+id/tag1"
+            android:layout_marginTop="73dp"
+            android:layout_marginLeft="21dp"
+            android:layout_width="95dp"
+            android:layout_height="41dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="高富帅"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_below="@+id/tag1"
+            android:id="@+id/tag4"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="21dp"
+            android:layout_width="95dp"
+            android:layout_height="69dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagLightGray"
+            android:gravity="center"
+            android:text="为了部落"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_below="@+id/tag4"
+            android:id="@+id/tag7"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="21dp"
+            android:layout_width="204dp"
+            android:layout_height="57dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagYellow"
+            android:gravity="center"
+            android:text="追求真爱的壕"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_below="@+id/tag7"
+            android:id="@+id/tag9"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="21dp"
+            android:layout_width="134dp"
+            android:layout_height="57dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="穷困潦倒的艺术家"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag1"
+            android:id="@+id/tag2"
+            android:layout_marginTop="73dp"
+            android:layout_marginLeft="14dp"
+            android:layout_width="116dp"
+            android:layout_height="69dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagYellow"
+            android:gravity="center"
+            android:text="超级吃吃吃吃货"
+            android:textColor="@color/tagText" />
+
+
+        <TextView
+            android:layout_toRightOf="@+id/tag4"
+            android:layout_below="@+id/tag2"
+            android:id="@+id/tag5"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="14dp"
+            android:layout_width="95dp"
+            android:layout_height="41dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="怪蜀黍"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag2"
+            android:id="@+id/tag3"
+            android:layout_marginTop="73dp"
+            android:layout_marginLeft="14dp"
+            android:layout_width="91dp"
+            android:layout_height="69dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="算命的"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag5"
+            android:layout_below="@+id/tag3"
+            android:id="@+id/tag6"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="112dp"
+            android:layout_height="56dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagLightGray"
+            android:gravity="center"
+            android:text="老实人"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag7"
+            android:layout_below="@+id/tag6"
+            android:id="@+id/tag8"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="113dp"
+            android:layout_height="44dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="抠脚女"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag9"
+            android:layout_below="@+id/tag7"
+            android:id="@+id/tag10"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="13dp"
+            android:layout_width="95dp"
+            android:layout_height="57dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagGray"
+            android:gravity="center"
+            android:text="女汉子"
+            android:textColor="@color/tagText" />
+
+        <TextView
+            android:layout_toRightOf="@+id/tag10"
+            android:layout_below="@+id/tag8"
+            android:id="@+id/tag11"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_width="77dp"
+            android:layout_height="56dp"
+            android:onClick="onSignSelect"
+            android:background="@color/tagYellow"
+            android:gravity="center"
+            android:text="萌妹子"
+            android:textColor="@color/tagText" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:background="@color/tagEditBg"
+            android:layout_below="@+id/tag10"
+            android:layout_marginTop="48dp"
+            android:id="@+id/et_input_sign"
+            android:layout_centerHorizontal="true"
+            android:hint="上面没有,我要自己写……"
+            android:padding="30dp"
+            android:textColorHint="@color/tagText"
+            android:textColor="@color/tagText"
+            android:textSize="14sp"
+
+            />
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="46dp"
+            android:background="@drawable/btn_status_selector"
+            android:layout_below="@+id/et_input_sign"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:onClick="inputOk"
+            android:text="进入"
+            android:textColor="@color/black_overlay"
+            />
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+
+        <!--android:id="@+id/activity_loading"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="16dp"-->
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+        <!--tools:context="com.sx.dw.accountAndSecurity.ui.LoadingActivity"-->
+        <!--tools:showIn="@layout/activity_set_user_info">-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center_vertical">-->
+
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<EditText-->
+                    <!--android:id="@+id/et_input_sign"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="输入你的标签，或者选择推荐的标签" />-->
+            <!--</android.support.design.widget.TextInputLayout>-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@color/colorAccent"-->
+                <!--android:onClick="inputOk"-->
+                <!--android:padding="8dp"-->
+                <!--android:text="OK"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="18dp" />-->
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:text="推荐标签：" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="高富帅"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="超级吃吃吃货"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="御姐"-->
+                <!--android:textColor="#4990e2" />-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="穷困潦倒的卖唱家"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="算命的"-->
+                <!--android:textColor="#4990e2" />-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="抠脚女汉子"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="为了部落！"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="为了联盟！"-->
+                <!--android:textColor="#4990e2" />-->
+
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="怪蜀黍"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="追求真爱的壕"-->
+                <!--android:textColor="#4990e2" />-->
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:onClick="onSignSelect"-->
+                <!--android:padding="16dp"-->
+                <!--android:text="老实人"-->
+                <!--android:textColor="#4990e2" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">大我</string>
+    <!-- 布局文件 -->
+
+    <!-- Strings related to loginHX -->
+    <string name="title_activity_login">@string/app_name</string>
+    <string name="title_activity_check_phone">验证手机</string>
+    <string name="title_activity_set_password">设置密码</string>
+    <string name="title_activity_video_chat_v2"></string>
+    <string name="title_activity_set_user_info">完善用户信息</string>
+    <string name="title_activity_account_info">账户与安全</string>
+    <string name="edittext_hint"><font size="14">   输入接头暗号，按回车发送</font></string>
+    <string name="search_hint"><font size="14">  请输入搜索条件</font></string>
+    <string name="address_hint"><font size="14">   请留下你的姓名、联系电话、详细地址，组织会尽快把物资地送到你手上！</font></string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_chat"> </string>
+    <string name="title_activity_test_user_center"> </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_user_info">用户信息</string>
+    <string name="title_activity_wealth">钱包</string>
+    <string name="title_activity_recharge">充值</string>
+    <string name="title_activity_withdraw_explain">兑现说明</string>
+
+    <string name="content_withdraw_explain">关于兑现\n兑现功能将于下个小版本上线，敬请期待！\n\n兑现方式\n用户先绑定微信，兑现的资金将汇入您的微信钱包\n\n兑现规则\n兑现最低金额为十元，手续费每笔收取十分之一</string>
+    <string name="title_activity_withdraw">兑现</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_reset_worth">修改身价</string>
+    <string name="title_activity_loading">你是干嘛的？</string>
+    <string name="title_activity_loading_v2">你是干嘛的？</string>
+
+
+
+
+    <string name="label_settings">Settings</string>
+    <string name="msg_welcome_message">Welcome to Open Video Call!</string>
+    <string name="label_channel_name_hint">Channel name</string>
+    <string name="label_encryption_key_hint">Encryption key</string>
+    <string name="label_join">Join</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_send">Send</string>
+    <string name="msg_say_something">Say something…</string>
+    <string name="msg_no_network_connection">
+    No network connection, please check the network settings
+    </string>
+    <string name="label_title_resolution">Resolution\n(Width * Height)</string>
+    <string name="label_title_frame_rate">Frame Rate\n(fps)</string>
+    <string name="label_title_bit_rate">Bit Rate\n(kbps)</string>
+    // DO NOT TRANSLATE
+    <string name="bit_rate_value_with_unit">%d kbps</string>
+    <string name="frame_rate_value_with_unit">%d fps</string>
+
+
+
+</resources>

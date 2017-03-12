@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.sx.dw.social.ui.UserInfoActivity"
+    tools:showIn="@layout/activity_user_info">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/icon_pagers"
+                android:layout_width="match_parent"
+                android:layout_height="376dp">
+
+            </android.support.v4.view.ViewPager>
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+
+                    android:id="@+id/tv_user_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="用户名"
+                    android:maxLines="1"
+                    android:layout_marginLeft="13dp"
+                    android:textColor="#666666"
+                    android:layout_centerVertical="true"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:id="@+id/tv_user_sex"
+                    android:src="@drawable/female"
+                    android:layout_toRightOf="@id/tv_user_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/info_starLogo"
+                    android:src="@drawable/action_icon_star_x3_1"
+                    android:layout_toRightOf="@id/tv_user_sex"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/info_tag"
+                    android:layout_toRightOf="@id/info_starLogo"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:src="@drawable/liked_icon"
+                    android:id="@+id/isLike"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="21dp"
+
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/info_bg"
+               >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="个性签名"
+                    android:textColor="@color/info_title"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_user_sign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="21dp"
+                    android:text="寒冬据说客户的健身卡回家的时候空间发的是谁打电话就爱上的就看试试看是50字最长"
+                    android:textColor="@color/info_value"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/info_bg"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:text="身价"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_worth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.01"
+                    android:paddingRight="21dp"
+                    android:textColor="@color/info_value"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="年龄"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:textColor="@color/info_value"
+                    android:paddingRight="21dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="星座"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_star"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="白羊座"
+                    android:textColor="@color/info_value"
+                    android:paddingRight="21dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="所在地"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知"
+                    android:textColor="@color/info_value"
+                    android:paddingRight="21dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_rname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知"
+                    android:paddingRight="21dp"
+                    android:textColor="@color/info_value"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="公司"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知"
+                    android:textColor="@color/info_value"
+                    android:paddingRight="21dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="职位"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="18dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="9dp"
+                    android:textColor="@color/info_title"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_user_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知"
+                    android:textColor="@color/info_value"
+                    android:paddingRight="21dp"
+                    android:textSize="13dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</FrameLayout>

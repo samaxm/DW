@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.sx.dw.test.fj.Scrolling2Activity">
+    <item
+        android:id="@+id/action_unlike"
+        android:orderInCategory="100"
+        android:title="取消收藏"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+
+</menu>
